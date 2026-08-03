@@ -1,10 +1,10 @@
 // spec: spec/orangehrm-add-employee.plan.md (sections 1-2)
 // seed: tests/seed.spec.ts
 
-import { test, expect } from '../fixtures';
-import { ADMIN_CREDENTIALS } from '../data/credentials';
-import { DASHBOARD_URL } from '../data/urls';
-import { generateUniqueEmployeeName, generateUniqueEmployeeId } from '../data/employee';
+import { test, expect } from '../../fixtures/fixtures';
+import { ADMIN_CREDENTIALS } from '../../data/login/credentials';
+import { DASHBOARD_URL } from '../../data/common/urls';
+import { generateUniqueEmployeeName, generateUniqueEmployeeId } from '../../utils/employee';
 
 test.describe('Add Employee and Verify via Search (primary end-to-end flow)', () => {
 

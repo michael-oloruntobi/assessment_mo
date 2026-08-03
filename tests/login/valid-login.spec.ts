@@ -1,9 +1,9 @@
 // spec: spec/orangehrm-login.plan.md (section 1: Valid Login Scenarios)
 // seed: tests/seed.spec.ts
 
-import { test, expect } from '../fixtures';
-import { ADMIN_CREDENTIALS } from '../data/credentials';
-import { DASHBOARD_URL } from '../data/urls';
+import { test, expect } from '../../fixtures/fixtures';
+import { ADMIN_CREDENTIALS } from '../../data/login/credentials';
+import { DASHBOARD_URL } from '../../data/common/urls';
 
 test.describe('Valid Login Scenarios', () => {
 

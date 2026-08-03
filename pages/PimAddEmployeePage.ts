@@ -1,5 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
-import { generateUniqueEmployeeId } from '../data/employee';
+import { generateUniqueEmployeeId } from '../utils/employee';
 
 /**
  * Page Object for the OrangeHRM PIM "Add Employee" form.

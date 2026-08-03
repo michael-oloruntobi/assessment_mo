@@ -1,8 +1,8 @@
 import { test as base } from '@playwright/test';
-import { LoginPage } from './pages/LoginPage';
-import { DashboardPage } from './pages/DashboardPage';
-import { PimAddEmployeePage } from './pages/PimAddEmployeePage';
-import { PimEmployeeListPage } from './pages/PimEmployeeListPage';
+import { LoginPage } from '../pages/LoginPage';
+import { DashboardPage } from '../pages/DashboardPage';
+import { PimAddEmployeePage } from '../pages/PimAddEmployeePage';
+import { PimEmployeeListPage } from '../pages/PimEmployeeListPage';
 
 type Fixtures = {
   loginPage: LoginPage;

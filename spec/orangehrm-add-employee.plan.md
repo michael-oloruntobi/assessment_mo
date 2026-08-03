@@ -80,9 +80,9 @@ This is also the PIM module's landing page.
   firstNameInput/middleNameInput/lastNameInput/employeeIdInput/saveButton/duplicateIdError/
   requiredFirstNameError/requiredLastNameError locators, and `PimEmployeeListPage` with
   employeeNameSearchInput/searchButton/resultsTable/recordCountText/noRecordsFoundMessage), wired
-  into `tests/fixtures.ts` following the pattern of `tests/pages/LoginPage.ts` /
-  `tests/pages/DashboardPage.ts`.
-- A test-data helper (e.g. `tests/data/employee.ts`) should generate a unique `{ firstName,
+  into `fixtures/fixtures.ts` following the pattern of `pages/LoginPage.ts` /
+  `pages/DashboardPage.ts`.
+- A test-data helper (e.g. `utils/employee.ts`) should generate a unique `{ firstName,
   lastName }` pair per test invocation (e.g. suffixing a base string with `Date.now()` and/or
   `test.info().workers`/a random token, to stay collision-safe under `fullyParallel` execution), and
   a function to produce a fresh unique numeric Employee Id candidate for retries.
