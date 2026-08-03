@@ -6,6 +6,8 @@ End-to-end tests for the [OrangeHRM OS 5.9 demo application](https://opensource-
 written with [Playwright Test](https://playwright.dev/) and TypeScript. The suite covers the Login
 feature and the PIM "Add Employee" flow (add → verify via search).
 
+Video URL: https://monosnap.ai/file/NPgtpW9rkgcWjNbzBRO83qWKBi3UDr
+
 ## Chosen Electives
 
 **Part 3 – Frontend UI Test Automation:** I chose this elective because it allowed me to
