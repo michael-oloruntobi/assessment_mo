@@ -6,6 +6,17 @@ End-to-end tests for the [OrangeHRM OS 5.9 demo application](https://opensource-
 written with [Playwright Test](https://playwright.dev/) and TypeScript. The suite covers the Login
 feature and the PIM "Add Employee" flow (add → verify via search).
 
+## Chosen Electives
+
+**Part 3 – Frontend UI Test Automation:** I chose this elective because it allowed me to
+demonstrate my experience building maintainable Playwright test frameworks using the Page Object
+Model, data-driven testing, cross-browser execution, and resilient automation practices.
+
+**Part 5 – CI/CD Integration:** I chose this elective to demonstrate my ability to integrate
+automated tests into a modern CI/CD pipeline. Implementing GitHub Actions with parallel execution,
+automated artifact collection, and support for expected-failure tests showcases my experience in
+delivering reliable, production-ready test automation that supports continuous delivery.
+
 ## Tech stack
 
 - [Playwright Test](https://playwright.dev/) `^1.62.1` (Chromium, Firefox, WebKit)
