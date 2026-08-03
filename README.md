@@ -1,5 +1,7 @@
 # ubulu_assessment — OrangeHRM Playwright Test Suite
 
+[![Playwright CI](https://github.com/michael-oloruntobi/assessment_mo/actions/workflows/playwright.yml/badge.svg)](https://github.com/michael-oloruntobi/assessment_mo/actions/workflows/playwright.yml)
+
 End-to-end tests for the [OrangeHRM OS 5.9 demo application](https://opensource-demo.orangehrmlive.com),
 written with [Playwright Test](https://playwright.dev/) and TypeScript. The suite covers the Login
 feature and the PIM "Add Employee" flow (add → verify via search).
@@ -16,6 +18,7 @@ feature and the PIM "Add Employee" flow (add → verify via search).
 ```bash
 npm install
 npx playwright install --with-deps   # first run only, installs browser binaries
+cp .env.example .env                 # copy the example, fill in your own values if needed
 ```
 
 Run the full suite (all three browser projects):
@@ -36,7 +39,10 @@ npx playwright show-report                  # open the last HTML report
 ```
 
 There is no app to stand up locally — every test runs against the public, shared OrangeHRM demo
-instance, so no `.env`, base URL, or local server configuration is required.
+instance. `BASE_URL`, `USERNAME`, and `PASSWORD` are still read from environment variables
+(`.env` locally, GitHub Secrets in CI) rather than hard-coded, purely to demonstrate secure
+configuration management practice — see [Note on credentials and secrets](#note-on-credentials-and-secrets)
+below.
 
 ## Project structure
 
@@ -161,6 +167,21 @@ with seeded, controllable data, I would:
   workflows spanning multiple user roles — for example, an employee submitting a leave request
   followed by an administrator approving it.
 
+## Note on credentials and secrets
+
+`BASE_URL`, `USERNAME`, and `PASSWORD` are read from environment variables
+([playwright.config.js](playwright.config.js) loads them from a local `.env` via `dotenv`;
+[.github/workflows/playwright.yml](.github/workflows/playwright.yml) injects them from GitHub
+Actions Secrets) rather than being hard-coded in [data/login/credentials.ts](data/login/credentials.ts).
+
+The OrangeHRM demo login (`Admin` / `admin123`) is intentionally public — anyone can read it from
+the app's own login page — so this doesn't protect a real secret. It's done anyway to demonstrate
+the configuration-management practice I'd apply against a real target: no credentials committed to
+source control, a `.env.example` documenting the required variables without exposing real values,
+`.env` git-ignored, and CI secrets pulled from GitHub Secrets rather than inlined into the workflow
+file. See [.env.example](.env.example) for the variables an actual environment/credential set would
+need.
+
 ## Notes on the shared demo environment
 
 - The app is a live, publicly shared instance — data (including employee counts) changes between
@@ -169,3 +190,9 @@ with seeded, controllable data, I would:
 - Retries are disabled locally and set to 2 on CI (`playwright.config.js`) as a safety net for
   transient network/demo-instance flakiness, but the collision-handling described above is a
   deliberate design choice, not a substitute for retries.
+
+## Author
+
+**Michael Oloruntobi**
+- Email: [michael.oloruntobi@gmail.com](mailto:michael.oloruntobi@gmail.com)
+- GitHub: [@michael-oloruntobi](https://github.com/michael-oloruntobi)

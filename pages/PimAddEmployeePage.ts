@@ -1,5 +1,6 @@
 import { type Page, type Locator } from '@playwright/test';
 import { generateUniqueEmployeeId } from '../utils/employee';
+import { ADD_EMPLOYEE_URL } from '../data/common/urls';
 
 /**
  * Page Object for the OrangeHRM PIM "Add Employee" form.
@@ -7,7 +8,7 @@ import { generateUniqueEmployeeId } from '../utils/employee';
  */
 export class PimAddEmployeePage {
   readonly page: Page;
-  readonly url = 'https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee';
+  readonly url = ADD_EMPLOYEE_URL;
 
   readonly firstNameInput: Locator;
   readonly middleNameInput: Locator;

@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { EMPLOYEE_LIST_URL } from '../data/common/urls';
 
 /**
  * Page Object for the OrangeHRM PIM "Employee List" / search page, which is
@@ -7,7 +8,7 @@ import { type Page, type Locator } from '@playwright/test';
  */
 export class PimEmployeeListPage {
   readonly page: Page;
-  readonly url = 'https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList';
+  readonly url = EMPLOYEE_LIST_URL;
 
   readonly employeeNameSearchInput: Locator;
   readonly employeeIdSearchInput: Locator;

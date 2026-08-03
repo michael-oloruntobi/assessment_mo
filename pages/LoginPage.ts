@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { LOGIN_URL } from '../data/common/urls';
 
 /**
  * Page Object Model for the OrangeHRM Login page.
@@ -6,7 +7,7 @@ import { type Page, type Locator } from '@playwright/test';
  */
 export class LoginPage {
   readonly page: Page;
-  readonly url = 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login';
+  readonly url = LOGIN_URL;
 
   readonly heading: Locator;
   readonly usernameInput: Locator;
