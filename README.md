@@ -2,11 +2,12 @@
 
 [![Playwright CI](https://github.com/michael-oloruntobi/assessment_mo/actions/workflows/playwright.yml/badge.svg)](https://github.com/michael-oloruntobi/assessment_mo/actions/workflows/playwright.yml)
 
+Video Walkthrough: https://monosnap.ai/file/tX9HUAqkP3t2eiU7YeGnJ13cq2fjT7
+
 End-to-end tests for the [OrangeHRM OS 5.9 demo application](https://opensource-demo.orangehrmlive.com),
 written with [Playwright Test](https://playwright.dev/) and TypeScript. The suite covers the Login
 feature and the PIM "Add Employee" flow (add → verify via search).
 
-Video URL: https://monosnap.ai/file/NPgtpW9rkgcWjNbzBRO83qWKBi3UDr
 
 ## Chosen Electives
 
